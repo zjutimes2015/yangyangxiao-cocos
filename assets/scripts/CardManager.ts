@@ -191,7 +191,7 @@ export class CardManager extends Component {
         lab.lineHeight = card.h;
         lab.horizontalAlign = Label.HorizontalAlign.CENTER;
         lab.verticalAlign = Label.VerticalAlign.CENTER;
-        lab.color = Color.WHITE;
+        lab.color = new Color(40, 40, 40, 255);
         lab.overflow = Label.Overflow.NONE;
         n.addChild(labelN);
 
@@ -299,13 +299,11 @@ export class CardManager extends Component {
                 c.node.destroy();
                 c.node = null;
             }
-            c.removed = true; // drop from live list
         }
-        const kept = this.cards.filter(c => c.removed && !remaining.includes(c));
-        // also keep already-picked (removed) placeholders — remaining marked removed above
-        const allRemoved = this.cards.filter(c => c.removed);
+        // keep only already-taken removed cards, then concat a fresh layout
+        const kept = this.cards.filter(c => c.removed);
         const fresh = this.layoutCards(emojis, layers);
-        this.cards = allRemoved.concat(fresh);
+        this.cards = kept.concat(fresh);
         for (let i = 0; i < fresh.length; i++) {
             this._createCardNode(fresh[i], i);
         }

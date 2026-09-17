@@ -146,7 +146,7 @@ export class SlotManager extends Component {
                 lab.lineHeight = this.cellH;
                 lab.horizontalAlign = Label.HorizontalAlign.CENTER;
                 lab.verticalAlign = Label.VerticalAlign.CENTER;
-                lab.color = Color.WHITE;
+                lab.color = new Color(40, 40, 40, 255);
                 cell.addChild(labelN);
                 const op = labelN.addComponent(UIOpacity);
                 op.opacity = 0;
