@@ -1,0 +1,10 @@
+{
+  "extends": "./temp/tsconfig.cocos.json",
+  "compilerOptions": {
+    "strict": false,
+    "target": "ES2015",
+    "module": "ES2015",
+    "lib": ["ES2015", "DOM"],
+    "types": ["../temp/declarations/cc", "../temp/declarations/cc.custom-macro", "../temp/declarations/jsb", "../temp/declarations/cc.env"]
+  }
+}

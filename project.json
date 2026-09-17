@@ -1,0 +1,9 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "packages",
+  "name": "yangyangxiao-cocos",
+  "id": "f7c3a1b2-8d4e-4f6a-9c1d-2e3f4a5b6c7d",
+  "version": "3.8.8",
+  "isNew": false,
+  "description": "羊羊消 Cocos Creator 3.x"
+}
