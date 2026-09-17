@@ -350,7 +350,6 @@ export class UIManager extends Component {
         op.opacity = 0;
 
         const text = this._makeLabel('LoseText', '好可惜', 52, Color.WHITE, 0, 160);
-        tex
         ov.addChild(text.node);
 
         const panel = new Node('LosePanel');
@@ -495,7 +494,6 @@ export class UIManager extends Component {
         g.rect(-this.designW / 2, -this.designH / 2, this.designW, this.designH);
         g.fill();
         const text = this._makeLabel('AdText', '广告播放中...（5）', 32, Color.WHITE, 0, 20);
-        tex
         ov.addChild(text.node);
         (ov as any)._text = text.label;
         const sub = this._makeLabel('AdSub', '模拟广告，稍后可接入真实 SDK', 16, new Color(170, 170, 170, 255), 0, -30);
